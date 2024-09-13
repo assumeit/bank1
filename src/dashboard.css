@@ -1,0 +1,271 @@
+/* General layout for the dashboard container */
+.dashboard-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f5;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 1000px;
+  color: #003087; /* RBC blue */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section for adding new accounts */
+.account-section {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.account-section label {
+  font-weight: bold;
+  color: #003087;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 16px;
+}
+
+.account-section input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.account-section input:focus {
+  outline: none;
+  border-color: #ffcc00; /* RBC yellow */
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Buttons */
+button {
+  background-color: #003087;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ffcc00;
+  color: #003087;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons for deposit/withdraw/transfer forms */
+.transaction-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px; /* Adds space between the buttons */
+}
+
+.transaction-buttons button {
+  width: 100%;
+  padding: 18px;
+  font-size: 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #003087;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.transaction-buttons button:hover {
+  background-color: #ffcc00;
+  color: #003087;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure that buttons are evenly spaced */
+.transaction-buttons > * {
+  flex: 1;
+}
+
+/* Available Accounts Section */
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+}
+
+ul li:hover {
+  background-color: #f7f7f7;
+}
+
+ul li .account-info {
+  flex-grow: 1;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* Fixed button size */
+ul li button {
+  padding: 10px 20px;
+  background-color: #003087;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 160px;
+  text-align: center;
+}
+
+ul li button:hover {
+  background-color: #ffcc00;
+  color: #003087;
+}
+
+/* Selected account balance */
+.balance-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.balance-section h2 {
+  color: #003087;
+  font-size: 26px;
+}
+
+.balance-section .balance-value {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-top: 10px;
+}
+
+/* Transaction table */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.transaction-table th, .transaction-table td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.transaction-table th {
+  background-color: #003087;
+  color: white;
+  font-weight: bold;
+}
+
+.transaction-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transaction-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.transaction-table .deposit {
+  color: #28a745;
+}
+
+.transaction-table .withdraw {
+  color: #dc3545;
+}
+
+/* Side-by-side deposit and withdraw forms */
+.transaction-forms {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.transaction-forms .account-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.transaction-forms .account-section:last-child {
+  margin-right: 0;
+}
+
+/* Input and transaction buttons in balance section */
+.account-section input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.account-section input[type="number"]:focus {
+  border-color: #ffcc00;
+}
+
+.account-section button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .dashboard-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-forms {
+    flex-direction: column;
+  }
+
+  .transaction-forms .account-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .transaction-buttons {
+    flex-direction: column;
+    gap: 15px; /* Adds space between buttons in column view */
+  }
+
+  .transaction-buttons button {
+    width: 100%;
+    margin-bottom: 15px; /* Ensure extra spacing between buttons in mobile */
+  }
+}
